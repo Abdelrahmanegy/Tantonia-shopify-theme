@@ -1,0 +1,91 @@
+{
+  "sections": {
+    "banner_caUD3z": {
+      "type": "banner",
+      "blocks": {
+        "large_text_tTjANX": {
+          "type": "LargeText",
+          "settings": {
+            "Large__banner__text": "<p>#SaleAlert<\/p>",
+            "Large__banner__text__size": 5,
+            "Large__banner__text__color": "#ffffff"
+          }
+        },
+        "small_text_ewqwLW": {
+          "type": "smallText",
+          "settings": {
+            "small__banner__text": "<p>Save more with coupuns & up to 70% off!<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "large_text_tTjANX",
+        "small_text_ewqwLW"
+      ],
+      "settings": {
+        "banner__background__image": "shopify:\/\/shop_images\/b1.jpg"
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "color_scheme": "background-1"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 16,
+        "columns_desktop": 4,
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "enable_filtering": true,
+        "filter_type": "horizontal",
+        "enable_sorting": true,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "newsletter_banner_UHWVFH": {
+      "type": "newsletter-banner",
+      "blocks": {
+        "heading_text_PpAj6Q": {
+          "type": "heading_text",
+          "settings": {
+            "newsletter_heading_text": "Sign up For NewsLetters",
+            "newsletter_subheading_text": "Get E-mail updates about our latest shop and",
+            "highlighted_text": "special offers.",
+            "highlighted_text_color": "#ffbd27"
+          }
+        },
+        "newsletter_form_jQxxkz": {
+          "type": "newsletter_form",
+          "settings": {
+            "email_placeholder_text": "Your email address"
+          }
+        }
+      },
+      "block_order": [
+        "heading_text_PpAj6Q",
+        "newsletter_form_jQxxkz"
+      ],
+      "settings": {
+        "newsletter_background": "shopify:\/\/shop_images\/b14.png",
+        "newsletter_background_color": "#041e42"
+      }
+    }
+  },
+  "order": [
+    "banner_caUD3z",
+    "banner",
+    "product-grid",
+    "newsletter_banner_UHWVFH"
+  ]
+}

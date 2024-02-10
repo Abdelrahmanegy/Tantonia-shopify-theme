@@ -1,0 +1,160 @@
+
+<style>
+
+#banner-3 .collection_box{
+
+display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: flex-start;
+    text-align: center;
+    min-width: 30%;
+    height: 30vh;
+    background-size: cover;
+    background-position: center;
+    padding: 1.5rem;
+    margin-bottom: 1.2rem;
+    border-radius: 5px;
+}
+
+#banner-3 h2{
+    
+    font-weight: 900;
+    
+}
+
+#banner-3 h3{
+    
+    font-weight: 800;
+    
+}
+
+#banner-3 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding : 0 5rem;
+    margin-top: 5rem;
+    
+}
+
+@media (max-width:799px){
+
+#banner-3 {
+        
+        padding: 0 2rem;
+    }
+
+
+  .collection_box{
+    width: 100%;
+  }
+        
+}
+
+
+
+
+</style>
+
+<section id="banner-3">
+  {% for block in section.blocks %}
+  {% case block.type %}
+    {% when "collection_box" %}
+      <a href="{{block.settings.collection_url}}" class="collection_box" style="background-image: {% if block.settings.Background_img == blank %} url('https://cdn.shopify.com/s/files/1/0838/3748/5362/files/b7.jpg?v=1704866836'); {% endif %}url('{{block.settings.Background_img | image_url }}');">
+     
+       
+      <h2 style="color: {{block.settings.heading_color}};">{{block.settings.heading}}</h2>
+      <h3 style="color: {{block.settings.subheading_color}};">{{block.settings.subHeading}}</h3>
+     
+    
+    </a>
+    
+      
+  {% endcase %}
+  {% endfor %}
+
+</section>
+
+{%  schema  %} 
+  {
+    "name" :"Collection list 2",
+    "blocks": [
+         {
+          "name": "Collection box",
+          "limit": 3,
+          "type" :"collection_box",
+          "settings": [
+               {
+                  "type": "text",
+                  "id": "heading",
+                  "label": "collection heading",
+                  "default": "SEASONAL SALE"
+               },
+
+               {
+
+                  "type": "text",
+                  "id": "subHeading",
+                  "label": "collection Subheading",
+                  "default": "Winter collection 50% off"
+               },
+
+               {
+
+                  "type": "image_picker",
+                  "id": "Background_img",
+                  "label": "Collection background"
+               },
+
+               {
+
+                  "type": "url",
+                  "id": "collection_url",
+                  "label": "Collection url"
+               },
+
+               {
+
+                 "type": "color",
+                 "id": "heading_color",
+                 "label": "Heading color",
+                 "default": "#fff"
+               },
+
+               {
+
+                 "type": "color",
+                 "id": "subheading_color",
+                 "label": "Subheading color",
+                 "default": "#ef3636"
+               }
+          ]
+
+         }
+    ],
+    "presets": [
+         {
+            "name": "Collection list 2",
+            "blocks": [
+                {
+                  "type" : "collection_box"
+                },
+
+                {
+                  "type" : "collection_box"
+                },
+
+                {
+                  "type" : "collection_box"
+                }
+            ]
+         }
+    ]
+    
+  }
+
+  
+
+
+{% endschema %} 

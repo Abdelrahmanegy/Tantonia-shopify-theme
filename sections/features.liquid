@@ -1,0 +1,106 @@
+
+
+<section id="feature" class="section-p">
+
+     {% for block in section.blocks %}
+        {% render 'feature' block:block %}
+        
+     {% endfor %}
+</section>
+
+{% schema %}
+    {
+        "name" :"features",
+        "blocks": [
+            {
+                "type": "feature",
+                "name": "Feature",
+                "limit": 6,
+                "settings": [
+                     {
+                        "type": "image_picker",
+                        "id": "feature__image",
+                        "label": "Feature image"
+                        
+                     },
+
+                     {
+                        "type": "text",
+                        "id": "feature__text",
+                        "label": "Feature text"
+                     },
+
+                     {
+                        "type": "color",
+                        "id": "Text__background_color",
+                        "label" : "Text background color"
+                     },
+
+                     {
+                        "type": "color",
+                        "id" :"text__color",
+                        "label" : "Text Color",
+                        "default": "#088178"
+                     }
+                ]
+            }
+        ],
+
+        "presets": [
+              {
+                "name": "Features section",
+                
+                "blocks": [
+                    {
+                        "type" :"feature",
+                        "settings" :{
+                            "feature__text": "Free shipping",
+                            "Text__background_color" : "#FDDDE4"
+                        }
+
+                        
+                    },
+                    {
+                        "type" : "feature",
+                        "settings" :{
+                            "feature__text": "Online order",
+                            "Text__background_color" : "#CDEBBC"
+                        }
+                    },
+                    {
+                        "type" : "feature",
+                        "settings" :{
+                            "feature__text": "Save money",
+                            "Text__background_color" : "#D1E8F2"
+                        }
+
+                    },
+                    {
+                        "type" : "feature",
+                        "settings" :{
+                            "feature__text": "Promotions",
+                            "Text__background_color" : "#CDD4F8"
+                        }
+                    },
+                    {
+                        "type" : "feature",
+                        "settings" :{
+                            "feature__text": "Happy Sell",
+                            "Text__background_color" : "#F6DBF6"
+                        }
+
+                    },
+
+                    {
+                        "type" : "feature",
+                        "settings" :{
+                            "feature__text": "24/7 support",
+                            "Text__background_color" : "#FFF2E5"
+                        }
+                    }
+
+                ]
+              }
+        ]
+    }
+{% endschema %}

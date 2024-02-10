@@ -1,0 +1,9 @@
+
+<div class="banner-box" style="background-image: {% if block.settings.banner__box__img == blank  %} url('https://cdn.shopify.com/s/files/1/0838/3748/5362/files/b17.jpg?v=1698799515'); {% endif %}url('{{block.settings.banner__box__img  |  image_url}}');">
+        <h4>{{block.settings.banner__box__small__text}}</h4>
+        <h2>{{block.settings.banner__box__large__text}}</h2>
+        <span>{{block.settings.banner__box__desc__text}}</span>
+        <a href="{{block.settings.banner__box__button__url}}"><button class="white">{{block.settings.banner__box__button__text}}</button></a>
+      </div>
+
+      

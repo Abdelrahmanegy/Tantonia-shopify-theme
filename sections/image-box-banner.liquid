@@ -1,0 +1,238 @@
+
+{% style  %} 
+    {% for block in section.blocks %}
+     .banner-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        text-align: center;
+         /* min-width: 100%;   */
+        height: 70vh;
+        background-size: cover;
+        background-position: center;
+        padding: 2rem;
+        white-space: nowrap;
+        border-radius: 5px;
+        flex-basis: 50%;
+    }
+
+    
+    
+    #Image-box-banner {
+        display: flex;
+        /* flex-wrap:wrap; */
+        padding-top:2rem;
+        /* justify-content:center; */
+    }
+    
+    #Image-box-banner h4{
+        color: {{block.settings.banner__box__small__text__color}};
+        font-size: 2.5rem;
+        font-weight: 300;
+    }
+    
+    
+    #Image-box-banner h2 {
+        color: {{block.settings.banner__box__large__text__color}};
+        font-size: {{block.settings.Large__text__size}}rem;
+        font-weight: 800;
+    }
+    
+    
+    #Image-box-banner span{
+        color: {{block.settings.banner__box__desc__text__color}};
+        font-size: 2.5rem;
+        font-weight: 500;
+        padding-bottom: 1rem;
+    }
+    
+    #Image-box-banner button.white {
+        font-size: 1.8rem;
+        font-weight: 600;
+        padding: 0.8rem 1.4rem;
+        color: {{block.settings.banner__box__button__text__color}};
+        background-color: {{block.settings.banner__box__button__background__color}};
+        border:1px solid #fff;
+        cursor: pointer;
+        transition: 0.2s ease;
+    }
+    
+    #Image-box-banner .banner-box:hover button{
+        background: {{block.settings.banner__box__button__background__color__onhover}};
+        border: 1px solid var(--green-color);
+        color: {{block.settings.banner__box__button__text__color__onhover}};
+    }
+    
+    {% endfor %}
+    
+    @media (max-width:997px){
+        #Image-box-banner{
+            flex-direction:column;
+        }
+    }
+
+    @media (max-width:510px){
+        #Image-box-banner h2{
+           font-size:3rem;
+        }
+        #Image-box-banner span{
+            font-size:2rem
+        }
+
+    }
+    {% endstyle %}
+
+
+    <section id="Image-box-banner">
+       {% for block in section.blocks %}
+        
+          {% case block.type %}
+            {% when "bannerBox" %}
+            
+             {% render "banner-box"  block:block%}
+             
+          {% endcase %}
+          
+       {% endfor %}
+       </section> 
+
+
+
+{% schema %}
+    {
+        "name" : "Box banner",
+        "blocks": [
+              {
+                "name": "Banner box",
+                "type": "bannerBox",
+                "limit": 2,
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "banner__box__img",
+                        "label": "Banner box background image"   
+                    },
+
+                    {
+                        "type": "inline_richtext",
+                        "id": "banner__box__small__text",
+                        "label": "Small text",
+                        "default": "crazy deals"
+                    },
+
+                    {
+                        "type": "color",
+                        "id": "banner__box__small__text__color",
+                        "label": "Small text color",
+                        "default": "#fff"
+                    },
+                    
+
+
+                    {
+
+                       "type": "inline_richtext",
+                       "id": "banner__box__large__text",
+                       "label": "Large text",
+                       "default": "buy 1 get 1 free"
+                    },
+
+                    {
+                        "type": "color",
+                        "id": "banner__box__large__text__color",
+                        "label": "Large text color",
+                        "default": "#fff"
+                    },
+
+                    {
+                       "type": "range",
+                       "min": 2,
+                       "max" : 4.5,
+                       "step": 0.5,
+                       "label": "large text size",
+                       "id": "Large__text__size",
+                       "unit": "rem",
+                       "default": 4.5
+                    },
+
+                    {
+                        "type": "richtext",
+                        "id": "banner__box__desc__text",
+                        "label": "Description",
+                        "default": "<p>The best classic dress is on sale</p>"
+                    },
+
+                    {
+                        "type": "color",
+                        "id": "banner__box__desc__text__color",
+                        "label": "Description color",
+                        "default": "#fff"
+                    },
+
+                    {
+                        "type": "inline_richtext",
+                        "id": "banner__box__button__text",
+                        "label": "Button text",
+                        "default": "Learn More"
+                    },
+
+                    {
+                      "type": "color",
+                      "id": "banner__box__button__text__color",
+                      "label": "Button text color",
+                      "default": "#fff"
+                    },
+
+                    {
+                       "type": "color",
+                       "id": "banner__box__button__background__color",
+                       "label": "Button background color",
+                       "default": "transparent"
+                    },
+
+                    {
+                       "type": "color",
+                       "id": "banner__box__button__text__color__onhover",
+                       "label": "Button color on hover",
+                       "default": "#fff"
+                    },
+
+                    {
+                        "type": "color",
+                        "id": "banner__box__button__background__color__onhover",
+                        "label": "Button background color on hover",
+                        "default": "#088178"
+                    },
+                    {
+                        "type": "url",
+                        "id": "banner__box__button__url",
+                        "label": "Button url"
+                        
+                        
+                        
+                    }
+                    
+                ]
+              }
+        ],
+
+        "presets": [
+             {
+                "name": "Image box banner",
+                "blocks": [
+                    {
+                        "type" : "bannerBox"
+                    },
+
+                    {
+                        "type" : "bannerBox"
+                    }
+                ]
+             }
+        ]
+    }
+
+    
+{% endschema %}

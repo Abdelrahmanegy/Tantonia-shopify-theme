@@ -1,0 +1,419 @@
+{
+  "sections": {
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Trade-in-offer",
+            "heading_size": "h2"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "Super value deals",
+            "text_style": "body",
+            "text__color": "#010101",
+            "font__size": 6
+          }
+        },
+        "1f260b85-5662-4e95-912f-7be5a6230706": {
+          "type": "text",
+          "settings": {
+            "text": "on all products",
+            "text_style": "body",
+            "text__color": "#088178",
+            "font__size": 6
+          }
+        },
+        "e006f520-f3b4-48ca-85a8-eb079c14c556": {
+          "type": "banner-small-text",
+          "settings": {
+            "small__text": "<strong>Save more with coupuns & up to 70% off!<\/strong>",
+            "small-text__color": "#a3a7b3",
+            "small_text_size": 2
+          }
+        },
+        "button": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop all",
+            "button_link_1": "shopify:\/\/collections\/all",
+            "button_style_secondary_1": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "1f260b85-5662-4e95-912f-7be5a6230706",
+        "e006f520-f3b4-48ca-85a8-eb079c14c556",
+        "button"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/hero4.png",
+        "image_overlay_opacity": 0,
+        "image_height": "large",
+        "desktop_content_position": "bottom-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-f976795c-b5ac-41c5-aba5-5f6707dad90e",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "ca2442d8-93eb-41d7-8c3a-596f47cec923": {
+      "type": "features",
+      "blocks": {
+        "9d946851-039f-4966-b24b-034f1226db25": {
+          "type": "feature",
+          "settings": {
+            "feature__image": "shopify:\/\/shop_images\/f1.png",
+            "feature__text": "Free shipping",
+            "Text__background_color": "#fddde4",
+            "text__color": "#088178"
+          }
+        },
+        "7a6650ba-a14d-40d1-8b75-b1007a256015": {
+          "type": "feature",
+          "settings": {
+            "feature__image": "shopify:\/\/shop_images\/f2.png",
+            "feature__text": "Online order",
+            "Text__background_color": "#cdebbc",
+            "text__color": "#088178"
+          }
+        },
+        "0e50ee96-96e0-4ab5-af2b-ee45e4c12012": {
+          "type": "feature",
+          "settings": {
+            "feature__image": "shopify:\/\/shop_images\/f3.png",
+            "feature__text": "Save money",
+            "Text__background_color": "#d1e8f2",
+            "text__color": "#088178"
+          }
+        },
+        "1b7fcc4a-3a55-4438-8dce-0982f6dda591": {
+          "type": "feature",
+          "settings": {
+            "feature__image": "shopify:\/\/shop_images\/f4.png",
+            "feature__text": "Promotions",
+            "Text__background_color": "#cdd4f8",
+            "text__color": "#088178"
+          }
+        },
+        "c568cb36-4cc8-4dc4-acf9-c976746b1682": {
+          "type": "feature",
+          "settings": {
+            "feature__image": "shopify:\/\/shop_images\/f5.png",
+            "feature__text": "Happy Sell",
+            "Text__background_color": "#f6dbf6",
+            "text__color": "#088178"
+          }
+        },
+        "9c089a16-b862-43e2-97e5-f52bb7675c98": {
+          "type": "feature",
+          "settings": {
+            "feature__image": "shopify:\/\/shop_images\/f6.png",
+            "feature__text": "24\/7 support",
+            "Text__background_color": "#fff2e5",
+            "text__color": "#088178"
+          }
+        }
+      },
+      "block_order": [
+        "9d946851-039f-4966-b24b-034f1226db25",
+        "7a6650ba-a14d-40d1-8b75-b1007a256015",
+        "0e50ee96-96e0-4ab5-af2b-ee45e4c12012",
+        "1b7fcc4a-3a55-4438-8dce-0982f6dda591",
+        "c568cb36-4cc8-4dc4-acf9-c976746b1682",
+        "9c089a16-b862-43e2-97e5-f52bb7675c98"
+      ],
+      "settings": {
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured products",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "all",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 28,
+        "padding_bottom": 36
+      }
+    },
+    "beba3c4c-22e3-493d-b21b-3e4a206237dd": {
+      "type": "banner",
+      "blocks": {
+        "f89f6d9e-146c-41b2-aa32-ad1d8e5173dd": {
+          "type": "smallText",
+          "settings": {
+            "small__banner__text": "<p>Repair services <\/p>"
+          }
+        },
+        "ddd054c1-6ec5-4fcd-a38c-0b00351fc97a": {
+          "type": "LargeText",
+          "settings": {
+            "Large__banner__text": "<h2>Up to 70% off- All t-shirts and Accessories<\/h2>",
+            "Large__banner__text__size": 5,
+            "Large__banner__text__color": "#ffffff"
+          }
+        },
+        "e5d106e5-2ac5-49fb-9fa0-df9a358b19fc": {
+          "type": "BannerButton",
+          "settings": {
+            "Banner__button__text": "<p>Explore more<\/p>",
+            "Button__url": "shopify:\/\/collections",
+            "Banner__button__color": "#000000",
+            "Banner__button__background__color": "#ffffff",
+            "Banner__button__color_onhover": "#ffffff",
+            "Banner__button__background__color_onhover": "#088178"
+          }
+        }
+      },
+      "block_order": [
+        "f89f6d9e-146c-41b2-aa32-ad1d8e5173dd",
+        "ddd054c1-6ec5-4fcd-a38c-0b00351fc97a",
+        "e5d106e5-2ac5-49fb-9fa0-df9a358b19fc"
+      ],
+      "settings": {
+        "banner__background__image": "shopify:\/\/shop_images\/b2.jpg"
+      }
+    },
+    "1e1031a4-f334-40cd-bc90-90e83e1dd941": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "<strong>New Arrivals<\/strong>",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "bags",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "dd560ec6-64dd-4789-a3c1-a0c46c57cf66": {
+      "type": "image-box-banner",
+      "blocks": {
+        "1ea5ea5e-d3cb-46bb-8fc2-af868cc58a48": {
+          "type": "bannerBox",
+          "settings": {
+            "banner__box__img": "shopify:\/\/shop_images\/b17.jpg",
+            "banner__box__small__text": "crazy deals",
+            "banner__box__small__text__color": "#ffffff",
+            "banner__box__large__text": "buy 1 get 1 free",
+            "banner__box__large__text__color": "#ffffff",
+            "Large__text__size": 4.5,
+            "banner__box__desc__text": "<p>the best classic dress is on sale<\/p>",
+            "banner__box__desc__text__color": "#ffffff",
+            "banner__box__button__text": "Learn More",
+            "banner__box__button__text__color": "#ffffff",
+            "banner__box__button__background__color": "rgba(0,0,0,0)",
+            "banner__box__button__text__color__onhover": "#ffffff",
+            "banner__box__button__background__color__onhover": "#088178",
+            "banner__box__button__url": "shopify:\/\/collections"
+          }
+        },
+        "cc4b9060-1a85-4750-9561-214d35afcfa7": {
+          "type": "bannerBox",
+          "settings": {
+            "banner__box__img": "shopify:\/\/shop_images\/b10.jpg",
+            "banner__box__small__text": "spring\/summer",
+            "banner__box__small__text__color": "#ffffff",
+            "banner__box__large__text": "upcoming seasons",
+            "banner__box__large__text__color": "#ffffff",
+            "Large__text__size": 4.5,
+            "banner__box__desc__text": "<p>the best classic dress is on sale<\/p>",
+            "banner__box__desc__text__color": "#ffffff",
+            "banner__box__button__text": "Collection",
+            "banner__box__button__text__color": "#ffffff",
+            "banner__box__button__background__color": "rgba(0,0,0,0)",
+            "banner__box__button__text__color__onhover": "#ffffff",
+            "banner__box__button__background__color__onhover": "#088178",
+            "banner__box__button__url": "shopify:\/\/collections\/women"
+          }
+        }
+      },
+      "block_order": [
+        "1ea5ea5e-d3cb-46bb-8fc2-af868cc58a48",
+        "cc4b9060-1a85-4750-9561-214d35afcfa7"
+      ],
+      "settings": {
+      }
+    },
+    "6df7dc55-1067-4cae-adab-46a3ae324444": {
+      "type": "collection-list-2",
+      "blocks": {
+        "665b7c9d-8ffe-4bff-b950-62da00fe962c": {
+          "type": "collection_box",
+          "settings": {
+            "heading": "<p>SEASONAL SALE<\/p>",
+            "subHeading": "<p>Winter collection 50% off<\/p>",
+            "Background_img": "shopify:\/\/shop_images\/b7.jpg",
+            "collection_url": "",
+            "heading_color": "#ffffff",
+            "subheading_color": "#ef3636"
+          }
+        },
+        "4d8050a2-5d86-4bf1-9394-3ee0c2e3d9f6": {
+          "type": "collection_box",
+          "settings": {
+            "heading": "<p>SEASONAL SALE<\/p>",
+            "subHeading": "<p>Winter collection 50% off<\/p>",
+            "Background_img": "shopify:\/\/shop_images\/b4.jpg",
+            "collection_url": "",
+            "heading_color": "#ffffff",
+            "subheading_color": "#ef3636"
+          }
+        },
+        "a13ab927-d55b-4182-a941-2e5d3239ce33": {
+          "type": "collection_box",
+          "settings": {
+            "heading": "<p>SEASONAL SALE<\/p>",
+            "subHeading": "<p>Winter collection 50% off<\/p>",
+            "Background_img": "shopify:\/\/shop_images\/b18.jpg",
+            "collection_url": "",
+            "heading_color": "#ffffff",
+            "subheading_color": "#ef3636"
+          }
+        }
+      },
+      "block_order": [
+        "665b7c9d-8ffe-4bff-b950-62da00fe962c",
+        "4d8050a2-5d86-4bf1-9394-3ee0c2e3d9f6",
+        "a13ab927-d55b-4182-a941-2e5d3239ce33"
+      ],
+      "settings": {
+      }
+    },
+    "newsletter_banner_bYrjCK": {
+      "type": "newsletter-banner",
+      "blocks": {
+        "heading_text_77yxYV": {
+          "type": "heading_text",
+          "settings": {
+            "newsletter_heading_text": "Sign up For NewsLetters",
+            "newsletter_subheading_text": "Get E-mail updates about our latest shop and",
+            "highlighted_text": "special offers.",
+            "highlighted_text_color": "#ffbd27"
+          }
+        },
+        "newsletter_form_EbkjTJ": {
+          "type": "newsletter_form",
+          "settings": {
+            "email_placeholder_text": "Your email address"
+          }
+        }
+      },
+      "block_order": [
+        "heading_text_77yxYV",
+        "newsletter_form_EbkjTJ"
+      ],
+      "settings": {
+        "newsletter_background": "shopify:\/\/shop_images\/b14.png",
+        "newsletter_background_color": "#041e42"
+      }
+    },
+    "faq_f3Htjn": {
+      "type": "faq",
+      "blocks": {
+        "faq_8NdxJq": {
+          "type": "FAQ",
+          "settings": {
+            "FAQ_question": "What are your payment methods?",
+            "FAQ_answer": "<p>We accept all major credit cards (Visa, Mastercard, American Express), as well as PayPal and Apple Pay. You can also choose to pay on delivery in certain regions.<\/p>",
+            "question_background_color": "#088178",
+            "question_text_color": "#fff"
+          }
+        },
+        "faq_3zctnp": {
+          "type": "FAQ",
+          "settings": {
+            "FAQ_question": "Do you offer free shipping?",
+            "FAQ_answer": "<p>Yes, we offer free standard shipping on all orders above a certain amount. You can also choose expedited shipping options for an additional fee.<\/p>",
+            "question_background_color": "#088178",
+            "question_text_color": "#fff"
+          }
+        },
+        "faq_EGwQdj": {
+          "type": "FAQ",
+          "settings": {
+            "FAQ_question": "What is your return policy?",
+            "FAQ_answer": "<p>We accept returns and exchanges within 30 days of purchase. Items must be unworn, unwashed, and have all original tags attached.<\/p>",
+            "question_background_color": "#088178",
+            "question_text_color": "#fff"
+          }
+        },
+        "faq_qN4PV6": {
+          "type": "FAQ",
+          "settings": {
+            "FAQ_question": "How can I track my order?",
+            "FAQ_answer": "<p>Once your order is shipped, you will receive a confirmation email with a tracking number. You can also track your order status on our website.<\/p>",
+            "question_background_color": "#088178",
+            "question_text_color": "#fff"
+          }
+        }
+      },
+      "block_order": [
+        "faq_8NdxJq",
+        "faq_3zctnp",
+        "faq_EGwQdj",
+        "faq_qN4PV6"
+      ],
+      "settings": {
+        "faq_heading": "Frequently Asked Questions"
+      }
+    }
+  },
+  "order": [
+    "image_banner",
+    "ca2442d8-93eb-41d7-8c3a-596f47cec923",
+    "featured_collection",
+    "beba3c4c-22e3-493d-b21b-3e4a206237dd",
+    "1e1031a4-f334-40cd-bc90-90e83e1dd941",
+    "dd560ec6-64dd-4789-a3c1-a0c46c57cf66",
+    "6df7dc55-1067-4cae-adab-46a3ae324444",
+    "newsletter_banner_bYrjCK",
+    "faq_f3Htjn"
+  ]
+}

@@ -1,0 +1,190 @@
+
+
+
+<style>
+   .Newsletter-banner{
+    padding: 4rem 8rem;
+    margin: 2.5rem 0;
+   } 
+
+   #newsletter {
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: 20% 30%;
+    background-color: {{section.settings.newsletter_background_color}};
+   }
+
+   #newsletter h4{
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+#newsletter p{
+    font-size: 2rem;
+    font-weight: 600;
+    color: #818ea0;
+}
+
+
+
+#newsletter input[type="email"]{
+    height: 5rem;
+    padding: 0 2rem;
+    font-size: 1.7rem;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    outline: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+     flex-grow: 1; }
+
+     #newsletter input[type="email"]:focus-visible{
+        box-shadow: none;
+     }
+
+     #newsletter input[type="submit"]{
+    background-color: #088178;
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 1rem 3rem;
+    color: #fff;
+    white-space: nowrap;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+}  
+
+  #newsletter form{
+    display: flex;
+     width: 35%;
+    }
+
+    @media (max-width:768px){
+        .Newsletter-banner {
+    padding: 4rem 1rem;
+    margin: 2.5rem 0;
+}
+    }
+
+
+</style>
+
+
+
+<section id="newsletter" class="Newsletter-banner" style=  " background-image: {% if section.settings.newsletter_background == blank %} url('https://cdn.shopify.com/s/files/1/0838/3748/5362/files/b14.png?v=1705484829'); {% endif %} url({{section.settings.newsletter_background  | image_url  }})">
+        {% for block in section.blocks%}
+            {% case block.type %}
+                {% when "heading_text"  %}
+                    <div class="newstext">
+                   <h4>{{block.settings.newsletter_heading_text}}</h4>
+                   <p>
+                    {{block.settings.newsletter_subheading_text}} <span style="color: {{block.settings.highlighted_text_color}};">{{block.settings.highlighted_text}}</span>
+                  </p> 
+                   </div> 
+                  
+              {% when  "newsletter_form" %}
+                {% form "customer" %}
+                     
+                        <input type="email" placeholder="{{block.settings.email_placeholder_text}}" name="contact[email]" >
+                        <input type="submit" value="Sign up" />
+                     
+                {% endform %}
+          {% endcase %}
+        {% endfor %}
+    </section>
+
+
+
+
+
+
+
+{% schema %}
+    {
+         "name" : "newsletter banner",
+         "settings": [
+            {
+                "type": "image_picker",
+                "id": "newsletter_background",
+                "label": "Newsletter background"
+            },
+            {
+                "type": "color",
+                "label": "Newsletter background color",
+                "id"   : "newsletter_background_color",
+                "default": "#041e42"
+            }
+         ],
+         "blocks": [
+            {
+                "name": "Heading text ",
+                "limit": 1,
+                "type": "heading_text",
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "newsletter_heading_text",
+                        "label": "Newsletter haeding text",
+                        "default": "Sign up For NewsLetters"
+                    },
+
+                    {
+                        "type": "text",
+                        "id": "newsletter_subheading_text",
+                        "label": "Newsletter subheading text",
+                        "default": "Get E-mail updates about our latest shop and"
+                    },
+                    {
+                        "type": "text",
+                        "id": "highlighted_text",
+                        "label": "Highlighted text",
+                        "default": "special offers."
+                    },
+                    {
+                        "type": "color",
+                        "label": "Highlighted text color",
+                        "id": "highlighted_text_color",
+                        "default": "#ffbd27"
+                    }
+                ]
+            },
+
+            
+
+            {
+                "name": "Newsletter Form",
+                "limit": 1,
+                "type": "newsletter_form",
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "email_placeholder_text",
+                        "label": "Email placeholder text",
+                        "default": "Your email address"
+                    }
+                ]
+                
+            }
+         ],
+         "presets": [
+              {
+                "name": "Newsletter banner",
+                "blocks": [
+                    {
+                        "type" : "heading_text"
+                    },
+                    { 
+                        "type" : "newsletter_form"
+                    }
+                ]
+              }
+         ]
+    }
+{% endschema %}

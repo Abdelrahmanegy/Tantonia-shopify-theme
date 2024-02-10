@@ -1,0 +1,134 @@
+
+<style>
+   .faq-container{
+       max-width: 70rem;
+       margin-left: auto;
+       margin-right: auto;
+   }
+
+   .faq-container h5{
+      text-align: center;
+      padding-bottom: 3rem;
+      font-weight: 600;
+      font-size: 3rem;
+   }
+   
+   .faq-container  summary {
+    font-weight: 600;
+    font-size: 2rem;
+    padding: .5em 1.3rem;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    transition: height 1s ease-in-out;
+   }
+
+   .faq-container summary::webkit-details-marker{
+    display: none;
+   }
+
+   .faq-container summary::after{
+    content: "\002B";
+   }
+
+   .faq-container  details[open] summary::after{
+      content: "\00D7";
+   }
+
+   .faq-container details[open] .answer{
+       padding: .5em 1.3rem ;
+       font-weight: 600;
+       font-size: 1.7rem;
+   }
+</style>
+
+<div class="faq-container">
+    <h5>{{section.settings.faq_heading}}</h5>
+  {% for block in section.blocks %}
+    
+  {% case block.type %}
+    {% when "FAQ" %}
+
+     <details>
+    <summary style="background-color:{{block.settings.question_background_color}}; color:{{block.settings.question_text_color}};">{{block.settings.FAQ_question}}</summary>
+    <div class="answer">
+        {{block.settings.FAQ_answer}}
+    </div>
+   </details>
+
+{% endcase %}
+{% endfor %}
+</div>
+
+
+
+
+
+
+
+
+
+{% schema %}
+    {
+        "name":"FAQ",
+        "settings": [
+            {
+                "type": "text",
+                "label": "FAQ Heading",
+                "id": "faq_heading",
+                "default": "Frequently Asked Questions"
+            }
+        ],
+        "blocks": [
+            {
+                "name": "FAQ",
+                "type": "FAQ",
+                "settings": [
+                     {
+                        "type": "text",
+                        "id": "FAQ_question",
+                        "label": "Question",
+                        "default": "What are your payment methods?"
+                     },
+                     {
+                        "type": "richtext",
+                        "id"  : "FAQ_answer",
+                        "label": "Answer",
+                        "default": "<p>We accept all major credit cards (Visa, Mastercard, American Express), as well as PayPal and Apple Pay. You can also choose to pay on delivery in certain regions.</p>"
+                     },
+                     {
+                        "type": "color",
+                        "id": "question_background_color",
+                        "label": "Question background color",
+                        "default": "#088178"
+                     },
+                     {
+                        "type": "color",
+                        "id": "question_text_color",
+                        "label": "Question text color",
+                        "default": "#fff"
+                     }
+                ]
+            }
+        ],
+        "presets": [
+              {
+                "name": "FAQ",
+                "blocks": [
+                    {
+                        "type" : "FAQ"
+                    },
+                    {
+                        "type" : "FAQ"
+                    },
+                    {
+                        "type" : "FAQ"
+                    },
+                    {
+                        "type" : "FAQ"
+                    }
+                ]
+              }
+        ]
+    }
+{% endschema %}

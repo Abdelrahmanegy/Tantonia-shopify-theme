@@ -1,0 +1,6 @@
+{{'features.css' | asset_url |  stylesheet_tag}}
+
+<div class="fe-box">
+<img {% if block.settings.feature__image == blank %} src="https://cdn.shopify.com/s/files/1/0838/3748/5362/files/f1.png?v=1697879461" {% endif %}  src="  {{block.settings.feature__image |  img_url}}" alt="{{block.settings.feature__image.alt}}" >
+            <h6 style="color: {{block.settings.text__color}}; background-color:{{block.settings.Text__background_color}};">{{block.settings.feature__text}}</h6>
+        </div>
